@@ -16,23 +16,69 @@ function writePassword() {
 
   passwordText.value = password;
 }
+//prom0pt question
 function passwordQuestion () {
   var text;
-  var user = prompt("Please choose password length between 8-128 characters.");
-  if (user == null || user == "") {
-     alert("Have a good day!");
+  var userLength = prompt("Please choose password length between 8-128 characters.");
+  if (!userLength) {
+    alert("Have a good day!");
+    return;
   }
-  if (user <8 || user >128) {
+  if (userLength <8 || userLength >128) {
     prompt("Please choose password length between 8-128 characters.");
     passwordQuestion()
   }
-  else lowercaseQuestion () 
+  else lowerCaseQuestion ();
+}
+//lowercase question
+function lowerCaseQuestion () {
+  var text;
+  var userLower = confirm("Will your password contain lowercases?");
+  if (lowerCaseQuestion === true) {
+    upperCaseQuestion();
+  }
+  else {
+    upperCaseQuestion();
+  }
 }
 
-function lowercaseQuestion () {
+
+//uppercase
+function upperCaseQuestion () {
   var text;
-  var user = confirm("Will your password contain lowercases?");
+  var userUpper = confirm("Will your password contain uppercases?");
+  if (upperCaseQuestion  === true) {
+    numericQuestion();
   }
+  else {
+    numericQuestion();
+  }
+}
+
+
+//numeric
+function numericQuestion () {
+  var text;
+  var userNumber = confirm("Will your password contain numbers?");
+  if (numericQuestion === true) {
+    specialQuestion();
+  }
+  else {
+    specialQuestion();
+  }
+}
+
+//special character
+function specialQuestion () {
+  var text;
+  var userSpecial = confirm("Will your password contain special characters?");
+  if (specialQuestion === true) {
+    writePassword();
+}
+else {
+  writePassword();
+}
+}
 
 // add confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 
