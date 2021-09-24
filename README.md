@@ -4,11 +4,14 @@ Homework 3 is all about javascript. my task was to write the javascript for a pa
 ## Installation
 Writing the javascript was tough for me. I had to really depend on google and past classwork to get through this. I have to admit, I did restart towards the end of my first try because i just could nto get the generator to work. I figured that it might be easier to restart instead of trying to debug the code. psuedocode was very helpful as well to get things rolling.
 ## Usage
-![page](./password-gen/Assets/page.png)
+![page](Assets/images/page.jpg)
+
 Password Generator. HTML and CSS provided.
-![prompt](./password-gen/Assets/prompt.png)
+![prompt](Assets/images/prompt.jpg)
+
 prompt will pop up and password question will appear. ex: would you like uppercase in the password.
-![password](./password-gen/Assets/password.png)
+
+![password](Assets/images/password.jpg)
 End result!
 
 ## License
