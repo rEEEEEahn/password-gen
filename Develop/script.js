@@ -1,5 +1,16 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var numbers = [0, 1, 2, 3, 4 , 5, 6, 7, 8, 9,];
+var alphabet = "abcdefghijklmnopqrstuvwxyz"
+var upperA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var special = "!@#$%^&*()"
+
+var userLength = 0;
+var userLower = false;
+var userUpper = false;
+var userNumber = false;
+var userSpecial = false;
+
 
 
 function generatePassword() {
@@ -11,6 +22,7 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
+  userLength
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -34,12 +46,7 @@ function passwordQuestion () {
 function lowerCaseQuestion () {
   var text;
   var userLower = confirm("Will your password contain lowercases?");
-  if (lowerCaseQuestion === true) {
     upperCaseQuestion();
-  }
-  else {
-    upperCaseQuestion();
-  }
 }
 
 
@@ -47,12 +54,7 @@ function lowerCaseQuestion () {
 function upperCaseQuestion () {
   var text;
   var userUpper = confirm("Will your password contain uppercases?");
-  if (upperCaseQuestion  === true) {
     numericQuestion();
-  }
-  else {
-    numericQuestion();
-  }
 }
 
 
@@ -60,12 +62,7 @@ function upperCaseQuestion () {
 function numericQuestion () {
   var text;
   var userNumber = confirm("Will your password contain numbers?");
-  if (numericQuestion === true) {
     specialQuestion();
-  }
-  else {
-    specialQuestion();
-  }
 }
 
 //special character
@@ -76,7 +73,8 @@ function specialQuestion () {
     writePassword();
 }
 else {
-  writePassword();
+  alert("Please select at least one!");
+  passwordQuestion ();
 }
 }
 
